@@ -32,3 +32,6 @@
     ├── global.css
     └── style.css
 ```
+## Ссылка на репозиторий
+
+https://github.com/kvadratikkkk/ono-tebe-nado-ad
