@@ -1,1 +1,364 @@
-/* место для вашего кода */
+/* ==========================================================================
+   style.css — стили проекта «Оно тебе надо»
+   ========================================================================== */
+
+/* ==========================================================================
+   ПЕРЕИСПОЛЬЗУЕМЫЙ ОВЕРЛЕЙ (обложка + карточки)
+   ========================================================================== */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* ==========================================================================
+   ПЕРЕИСПОЛЬЗУЕМЫЙ АДРЕС (шапка + подвал)
+   ========================================================================== */
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.address__link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.address__link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   ШАПКА
+   Грид: [меню] [логотип — min-content] [адрес]
+   ========================================================================== */
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 24px;
+}
+
+.header__links-list-item {
+  list-style-type: circle;
+}
+
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+
+.header__link {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.header__link_active {
+  font-weight: bold;
+}
+
+.header__link:hover {
+  opacity: 0.6;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__logo-image {
+  width: 140px;
+}
+
+.header__address {
+  justify-self: end;
+  max-width: 180px;
+}
+
+/* ==========================================================================
+   ОБЛОЖКА (cover)
+   ========================================================================== */
+
+.cover {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/cover.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cover__description {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  padding: 60px 50px;
+}
+
+.cover__title {
+  width: 100%;
+  color: #fff;
+  font-size: 148px;
+  font-weight: bold;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.aligned-text {
+  display: block;
+}
+
+.aligned-text_left   { text-align: left; }
+.aligned-text_center { text-align: center; }
+.aligned-text_right  { text-align: right; }
+
+.letter-spacing-extended {
+  letter-spacing: 0.25em;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.cover__description-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cover__description-subtitle {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+  word-spacing: 0.15em;
+}
+
+.bet-button {
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 14px 40px;
+}
+
+.bet-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   СЕКЦИЯ ЛОТОВ (lots)
+   ========================================================================== */
+
+.lots {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 50px;
+}
+
+.lots__heading {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.lots__card-list-item {
+  width: calc((100% - 40px) / 3);
+  min-height: 400px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 28px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card_type_lot-01 {
+  background-image: url('../images/card-lot-01.jpg');
+}
+
+.card_type_lot-02 {
+  background-image: url('../images/card-lot-02.jpg');
+}
+
+.card_type_lot-03 {
+  background-image: url('../images/card-lot-03.jpg');
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card__text {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.lots__look-more-link {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.lots__look-more-link:hover {
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   СЕКЦИЯ «ОБ АУКЦИОНЕ» (about)
+   ========================================================================== */
+
+.about {
+  display: grid;
+  grid-template-columns: calc((100% - 100px - 40px) / 3) 1fr;
+  gap: 60px;
+  padding: 60px 50px;
+  background-color: #000;
+  color: #fff;
+}
+
+.about__column_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+.about__logo-image {
+  width: 60%;
+}
+
+.about__column_content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.about__title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about__text p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   ПОДВАЛ (footer)
+   ========================================================================== */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  padding: 40px 50px;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer__menu-link {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer__menu-link_active {
+  font-weight: bold;
+}
+
+.footer__menu-link:hover {
+  text-decoration: underline;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__social-link {
+  display: block;
+}
+
+.footer__social-link:hover {
+  opacity: 0.7;
+}
+
+.footer__social-icon {
+  width: 28px;
+  height: 28px;
+}
