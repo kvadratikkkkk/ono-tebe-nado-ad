@@ -1,6 +1,6 @@
 # Оно тебе надо
 
-https://github.com/kvadratikkkk/ono-tebe-nado-ad
+https://github.com/kvadratikkkkk/ono-tebe-nado-ad
 
 Учебный проект — вёрстка страницы онлайн-аукциона.
 
