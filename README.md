@@ -1,6 +1,8 @@
 # Оно тебе надо
 
-Учебный проект — вёрстка страницы онлайн-аукциона «Оно тебе надо».
+https://github.com/kvadratikkkk/ono-tebe-nado-ad
+
+Учебный проект — вёрстка страницы онлайн-аукциона.
 
 ## Технологии
 
@@ -32,6 +34,3 @@
     ├── global.css
     └── style.css
 ```
-## Ссылка на репозиторий
-
-https://github.com/kvadratikkkk/ono-tebe-nado-ad
